@@ -10,11 +10,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "html", "video-conferencing.html"));
 });
 app.get("/about", (req, res) => {
-  //res.sendFile(path.join(__dirname, "html", "about.html"));
-  fs.readFile("/html/video-conferencing.html", function (error, data) {
-    res.writeHead(200, { "Content-Type": "test/html" });
-    res.end(data);
-  });
+  res.sendFile(path.join(__dirname, "html", "about.html"));
 });
 app.listen(8080, () => {
   console.log("Express App on port 8080!");
